@@ -115,15 +115,15 @@ class Solution {
         }
         while (index < length && Character.isDigit(chars[index])){
 
-            if(sign && ans > (Integer.MAX_VALUE-(chars[index]-'0'))/10){
+            if(sign && ans < (Integer.MIN_VALUE+1+(chars[index]-'0'))/10){
                 return Integer.MAX_VALUE ;
-            }else if(!sign && ans > (Integer.MAX_VALUE-(chars[index]-'0'))/10){
+            }else if(!sign && ans < (Integer.MIN_VALUE+(chars[index]-'0'))/10){
                 return Integer.MIN_VALUE;
             }
-            ans = ans*10 + (chars[index]-'0');
+            ans = ans*10 - (chars[index]-'0');
             index++;
         }
-        return sign ? ans : -ans;
+        return sign ? -ans : ans;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
