@@ -109,9 +109,9 @@ class Solution {
 
         for(Map.Entry<Integer, String> entry : linkedHashMap.entrySet()){
             Integer count = 0;
-            while (num >= entry.getKey()){
-                count++;
-                num = num - entry.getKey();
+            if (num >= entry.getKey()){
+                count = num / entry.getKey();
+                num = num % entry.getKey();
             }
             while (count>0){
                 nums.append(entry.getValue());
