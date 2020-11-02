@@ -21,7 +21,6 @@ import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Timer;
 
 import com.alibaba.fastjson.JSONObject;
 
@@ -31,14 +30,14 @@ import org.apache.commons.lang.time.StopWatch;
  * TwoSum
  */    
 public class TwoSum{
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         Solution solution = new TwoSum().new Solution();
         int[] nums = {7, 113,32,2, 11, 15,12,14,66,55,78};
         int target = 47;
 
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-        int[] result = solution.twoSum2(nums,target);
+        int[] result = solution.twoSum3(nums,target);
         //try {
         //    Thread.sleep(1L);
         //}catch (Exception e){
@@ -99,6 +98,31 @@ class Solution {
         j=map.get(nums[j]);
         return new int[]{i,j};
     }
+
+    int[] twoSum3(int[] data, int target) throws Exception{
+        if(data == null){
+            throw new Exception("invalid input");
+        }
+        int length = data.length;
+
+        Arrays.sort(data);
+
+        int[] temp = new int[length];
+        int k=0;
+        for(int i=0,j=length-1;i<length&&j>0&&i<j;){
+            if(data[i]+data[j]==target){
+                temp[k++]=data[i];
+                temp[k++]=data[j];
+            }
+            if(data[i]+data[j]>target){
+                j--;
+            }else {
+                i++;
+            }
+        }
+        return temp;
+    }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)
   
