@@ -1,5 +1,7 @@
 package leetcode.editor.cn;
 
+import com.alibaba.fastjson.JSON;
+
 /**
  * @author ：xinze
  * @date ：Created by 2020/4/23 09:23
@@ -11,6 +13,12 @@ package leetcode.editor.cn;
 public class Test {
 
     public static void main(String[] args) {
+
+        int[][] ww = new int[][]{{1,2},{2,3}};
+
+        System.out.println(ww[0]);
+        System.out.println(JSON.toJSONString(ww));
+
         float a = 0.125f;
         double b = 0.125d;
         //1、true
