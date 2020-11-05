@@ -16,6 +16,18 @@ import java.util.LinkedList;
 public class CommonFather {
     public static void main(String[] args) {
 
+        //Executors.newCachedThreadPool();
+        //Long
+        //Integer
+        //Double
+
+        //Float
+        //AbstractQueuedSynchronizer
+        //HashSet
+        //LinkedList
+        //ArrayList
+        //Object
+        //Collections
     }
 
     /**
@@ -24,7 +36,7 @@ public class CommonFather {
      * 递归实现
      * @param root
      * @param a
-     * @param b
+     //* @param b
      * @return
      */
     TreeNode commonFather(TreeNode root, TreeNode a, TreeNode b){
