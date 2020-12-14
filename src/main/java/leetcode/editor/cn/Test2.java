@@ -1,6 +1,9 @@
 package leetcode.editor.cn;
 
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.stream.Collectors;
 
 import com.alibaba.fastjson.JSONObject;
@@ -16,13 +19,23 @@ import com.alibaba.fastjson.JSONObject;
 public class Test2 {
 
     public static void main(String[] args) {
-        int n = -2;
 
-        char n1 = 2 + '0';
-        int n2 = 60 - '0';
-        int n3 = 1 + '0';
-        int n4 = 1 - '0';
-        System.out.println();
+        LinkedHashMap linkedHashMap = new LinkedHashMap(16);
+        //linkedHashMap
+
+        LinkedHashSet linkedHashSet = new LinkedHashSet(16);
+
+        //Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate();
+
+        ConcurrentSkipListMap concurrentSkipListMap = new ConcurrentSkipListMap();
+
+        //int n = -2;
+        //
+        //char n1 = 2 + '0';
+        //int n2 = 60 - '0';
+        //int n3 = 1 + '0';
+        //int n4 = 1 - '0';
+        //System.out.println();
 
         //int a= n-1;
         //String binary = Integer.toBinaryString(a);

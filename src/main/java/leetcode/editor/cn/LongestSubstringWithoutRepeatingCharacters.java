@@ -80,13 +80,13 @@ class Solution {
 
         int n=s.length(), ans=0;
         Map<Character, Integer> map = new HashMap<>(16);
-        for(int start=0,end=0;end <n;end++){
+        for(int start=-1,end=0;end <n;end++){
             Character character = s.charAt(end);
             if(map.containsKey(character)){
                 start = Math.max(map.get(character),start);
             }
-            ans = Math.max(ans,end-start+1);
-            map.put(s.charAt(end),end+1);
+            ans = Math.max(ans,end-start);
+            map.put(s.charAt(end),end);
         }
         return ans;
     }
