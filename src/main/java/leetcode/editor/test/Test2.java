@@ -1,9 +1,7 @@
-package leetcode.editor.cn;
+package leetcode.editor.test;
 
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
+import java.lang.reflect.Method;
 import java.util.List;
-import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.stream.Collectors;
 
 import com.alibaba.fastjson.JSONObject;
@@ -20,14 +18,16 @@ public class Test2 {
 
     public static void main(String[] args) {
 
-        LinkedHashMap linkedHashMap = new LinkedHashMap(16);
-        //linkedHashMap
+        Test2 test2 = new Test2();
 
-        LinkedHashSet linkedHashSet = new LinkedHashSet(16);
-
-        //Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate();
-
-        ConcurrentSkipListMap concurrentSkipListMap = new ConcurrentSkipListMap();
+        //LinkedHashMap linkedHashMap = new LinkedHashMap(16);
+        ////linkedHashMap
+        //
+        //LinkedHashSet linkedHashSet = new LinkedHashSet(16);
+        //
+        ////Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate();
+        //
+        //ConcurrentSkipListMap concurrentSkipListMap = new ConcurrentSkipListMap();
 
         //int n = -2;
         //
@@ -53,6 +53,25 @@ public class Test2 {
         //Test2 test2 = new Test2();
         //test2.test(list);
 
+        //test2.testClassForName();
+
+    }
+
+    void testClassForName(){
+        String packPath = "leetcode.editor.test.TestClassForname";
+        String packPathImpl = "leetcode.editor.test.impl.TestClassFornameImpl";
+
+        try {
+            Class<?> aClass = Class.forName(packPathImpl);
+
+            Method method = aClass.getMethod("getClazz1");
+
+            Object object = method.invoke(aClass.newInstance());
+
+            System.out.println(object);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     void test(List<String> list){
