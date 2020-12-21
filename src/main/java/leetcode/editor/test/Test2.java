@@ -2,6 +2,8 @@ package leetcode.editor.test;
 
 import java.lang.reflect.Method;
 import java.util.List;
+import java.util.concurrent.Future;
+import java.util.concurrent.FutureTask;
 import java.util.stream.Collectors;
 
 import com.alibaba.fastjson.JSONObject;
@@ -55,6 +57,11 @@ public class Test2 {
 
         //test2.testClassForName();
 
+    }
+
+    void testFuture(){
+        Future future = new FutureTask(null);
+        //future.add
     }
 
     void testClassForName(){
