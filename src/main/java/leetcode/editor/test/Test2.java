@@ -59,6 +59,11 @@ public class Test2 {
 
     }
 
+    void testGuava(){
+        //FutureFallback
+        FutureTask futureTask = new FutureTask(null);
+    }
+
     void testFuture(){
         Future future = new FutureTask(null);
         //future.add
